@@ -16,22 +16,22 @@ document.addEventListener("DOMContentLoaded", function() {
         const messages = [];
 
         // Retrival and validation for the username element
-        const usernameInput = document.getElementById('username').value.trim();
-        if (usernameInput.length < 3) {
+        const username = document.getElementById('username').value.trim();
+        if (username.length < 3) {
             isValid = false;
             messages.push('Username must be at least 3 characters long.');
         }
 
         // Retrival and validation for the email element
-        const emailInput = document.getElementById('email').value.trim();
-        if (!emailInput.includes('@') || !emailInput.includes('.')) {
+        const email = document.getElementById('email').value.trim();
+        if (!email.includes('@') || !email.includes('.')) {
             isValid = false;
             messages.push('Please enter a valid email address');
         }
 
         // Retrival and validation for the password element.
-        const passwordInput = document.getElementById('password').value.trim();
-        if (passwordInput.length < 8) {
+        const password = document.getElementById('password').value.trim();
+        if (password.length < 8) {
             isValid = false;
             messages.push('Password must at least 8 characters long.');
         }
